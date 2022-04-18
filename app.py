@@ -15,5 +15,5 @@ for file in files_list:
     while file[0].isdigit():
         file = file[1:]
         file = file.strip()
-    os.rename(f'./Test/{file_current_name}', f'./Test/{str(random_number)} {file}')
+    os.rename(files_location + file_current_name, files_location + str(random_number) + file)
     non_repeated_list.append(random_number)
