@@ -6,7 +6,7 @@ def randomize_file_names_order():
 
     files_location = check_back_slash_in_folder_path(files_location)
 
-    files_list = os.listdir(files_location)
+    files_list = [file for file in os.listdir(files_location) if os.path.isfile(os.path.join(files_location, file))]
 
     non_repeated_list = list()
 
